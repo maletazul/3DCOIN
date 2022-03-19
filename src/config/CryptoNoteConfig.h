@@ -34,7 +34,7 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1'000'000'000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1a381d;
 
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;
 
@@ -51,17 +51,17 @@ namespace CryptoNote
         // MONEY_SUPPLY - total number coins to be generated
         const uint64_t MONEY_SUPPLY = UINT64_C(1'000'000'000'000'00);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187'000;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 3;
 
         const size_t ZAWY_DIFFICULTY_V2 = 0;
 
         const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 3;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 620'000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 4;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 700'000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 6;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 800'000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 10;
 
         const unsigned EMISSION_SPEED_FACTOR = 25;
 
@@ -84,9 +84,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE =
             100000; // size of block (bytes) after which reward for block calculated using block size
-        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2 = 20'000;
+        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2 = 10;
 
-        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 = 10'000;
+        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 = 6;
 
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 
@@ -126,11 +126,11 @@ namespace CryptoNote
         const uint64_t MAXIMUM_MIXIN_V3 = 3;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440'000;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 3;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 620'000;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 6;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 800'000;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 10;
 
         /* The mixin to use by default with wallet software */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -148,7 +148,7 @@ namespace CryptoNote
 
         const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
 
-        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 800'000;
+        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 6;
 
         const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
@@ -246,13 +246,13 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 350'000; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V5 = 1'200'000; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V5 = 4; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 1'800'000; // Upgrade height for Chukwa v1 switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 6; // Upgrade height for Chukwa v1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V7 = 3'000'000; // Upgrade height for Chukwa v2 switch
+        const uint32_t UPGRADE_HEIGHT_V7 = 10; // Upgrade height for Chukwa v2 switch
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V7;
 
@@ -264,37 +264,11 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-            187'000, // 0
-            350'000, // 1
-            440'000, // 2
-            620'000, // 3
-            700'000, // 4
-            800'000, // 5
-            1'000'000, // 6
-            1'200'000, // 7
-            1'300'000, // 8
-            1'400'000, // 9
-            1'600'000, // 10
-            1'800'000, // 11
-            2'000'000, // 12
-            2'200'000, // 13
-            2'400'000, // 14
-            2'600'000, // 15
-            2'800'000, // 16
-            3'000'000, // 17
-            3'200'000, // 18
-            3'400'000, // 19
-            3'600'000, // 20
-            3'800'000, // 21
-            4'000'000, // 22
-            4'200'000, // 23
-            4'400'000, // 24
-            4'600'000, // 25
-            4'800'000, // 26
-            5'000'000, // 27
-            5'200'000, // 28
-            5'400'000, // 29
-            5'500'000, // 30
+            3, // 0
+            4, // 1
+            6 // 2
+            10// 3
+
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -326,7 +300,7 @@ namespace CryptoNote
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "TurtleCoin";
+    const char CRYPTONOTE_NAME[] = "3DCoin
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
@@ -361,9 +335,9 @@ namespace CryptoNote
     const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT = 100; // by default, blocks count in blocks downloading
     const size_t COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT = 1'000;
 
-    const int P2P_DEFAULT_PORT = 11'897;
+    const int P2P_DEFAULT_PORT = 22'897;
 
-    const int RPC_DEFAULT_PORT = 11'898;
+    const int RPC_DEFAULT_PORT = 22'898;
 
     const int SERVICE_DEFAULT_PORT = 8'070;
 
@@ -414,14 +388,10 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9}};
+        {0xc5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x37, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x83, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "145.239.88.119:11897", // cision
-        "165.227.252.132:11897", // iburnmycd
-        "148.251.178.238:11897", // hv
-        "45.32.138.7:11897", // extra
-        "46.214.70.196:11897", // CuveeRO
-        "89.203.235.107:11897" // CuveeCZ
+        "145.251.194.180:22897", // node1
+        "78.46.80.10:22897", // node2
     };
 } // namespace CryptoNote
