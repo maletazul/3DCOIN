@@ -51,17 +51,17 @@ namespace CryptoNote
         // MONEY_SUPPLY - total number coins to be generated
         const uint64_t MONEY_SUPPLY = UINT64_C(1'000'000'000'000'00);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 3;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;
 
         const size_t ZAWY_DIFFICULTY_V2 = 0;
 
         const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 3;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 4;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 1;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 6;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 2;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 10;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 3;
 
         const unsigned EMISSION_SPEED_FACTOR = 25;
 
