@@ -51,7 +51,7 @@ namespace CryptoNote
         // MONEY_SUPPLY - total number coins to be generated
         const uint64_t MONEY_SUPPLY = UINT64_C(1'000'000'000'000'00);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 3;
 
         const size_t ZAWY_DIFFICULTY_V2 = 0;
 
@@ -108,7 +108,7 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
         const double MINIMUM_FEE_PER_BYTE_V1 = 500.00 / FEE_PER_BYTE_CHUNK_SIZE;
 
         /* Height for our first fee to byte change to take effect. */
-        const uint64_t MINIMUM_FEE_PER_BYTE_V1_HEIGHT = 2'200'000;
+        const uint64_t MINIMUM_FEE_PER_BYTE_V1_HEIGHT = 200;
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1 = 0;
@@ -152,9 +152,9 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const size_t DIFFICULTY_WINDOW = 17;
 
-        const size_t DIFFICULTY_WINDOW_V1 = 2'880;
+        const size_t DIFFICULTY_WINDOW_V1 = 288;
 
-        const size_t DIFFICULTY_WINDOW_V2 = 2'880;
+        const size_t DIFFICULTY_WINDOW_V2 = 288;
 
         const uint64_t DIFFICULTY_WINDOW_V3 = 60;
 
@@ -182,7 +182,7 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const uint64_t MAX_EXTRA_SIZE_V2 = 1024;
 
-        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT = 10;
+        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT = 1'300'000 ;
 
         /* 25 trillion atomic, or 250 billion TRTL -> Max supply / mixin+1 outputs */
         /* This is enforced on the daemon side. An output > 250 billion causes
