@@ -184,7 +184,7 @@ namespace CryptoNote
 
         const uint64_t MAX_EXTRA_SIZE_V2 = 1024;
 
-        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT = 1'300'000;
+        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT = 10;
 
         /* 25 trillion atomic, or 250 billion TRTL -> Max supply / mixin+1 outputs */
         /* This is enforced on the daemon side. An output > 250 billion causes
@@ -196,21 +196,21 @@ namespace CryptoNote
          * be created in a transaction */
         const uint64_t MAX_OUTPUT_SIZE_CLIENT = 1'000'000'000'00;
 
-        const uint64_t MAX_OUTPUT_SIZE_HEIGHT = 2'000'000;
+        const uint64_t MAX_OUTPUT_SIZE_HEIGHT = 200;
 
         /* For new projects forked from this code base, the values immediately below
            should be changed to 0 to prevent issues with transaction processing
            and other possible unexpected behavior */
-        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 1'400'000;
+        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 100;
 
-        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT = 1'600'000;
+        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT = 160;
 
-        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 1'600'000;
+        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 160;
 
         /* Coinbase transactions must include the recipient address + tx priv
          * key in tx_extra to verify the outputs go to that address after this
          * height. */
-        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 2'800'000;
+        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 280;
 
         /* This describes how many blocks of "wiggle" room transactions have regarding
            when the outputs can be spent based on a reasonable belief that the outputs
@@ -240,7 +240,7 @@ namespace CryptoNote
 
         const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1 = 90;
 
-        const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1_HEIGHT = 2'200'000;
+        const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1_HEIGHT = 220;
 
         const uint32_t UPGRADE_HEIGHT_V2 = 1;
 
