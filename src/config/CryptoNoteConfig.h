@@ -262,10 +262,6 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-    /*           3, // 0
-       /*        4, // 1
-          /*     6 // 2
-            /*   10// 3 */
 
         };
 
