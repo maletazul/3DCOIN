@@ -20,7 +20,7 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 30; // seconds
+        const uint64_t DIFFICULTY_TARGET = 10; // seconds
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500'000'000;
 
@@ -55,7 +55,7 @@ namespace CryptoNote
 
         const size_t ZAWY_DIFFICULTY_V2 = 0;
 
-        const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 3;
+        const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 0;
 
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 1;
 
@@ -63,7 +63,7 @@ namespace CryptoNote
 
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 3;
 
-        const unsigned EMISSION_SPEED_FACTOR = 25;
+        const unsigned EMISSION_SPEED_FACTOR = 21;
 
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -115,20 +115,20 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const uint64_t MAXIMUM_MIXIN_V1 = 100;
 
-        const uint64_t MINIMUM_MIXIN_V2 = 7;
+        const uint64_t MINIMUM_MIXIN_V2 = 3;
 
-        const uint64_t MAXIMUM_MIXIN_V2 = 7;
+        const uint64_t MAXIMUM_MIXIN_V2 = 3;
 
-        const uint64_t MINIMUM_MIXIN_V3 = 3;
+        const uint64_t MINIMUM_MIXIN_V3 = 7;
 
-        const uint64_t MAXIMUM_MIXIN_V3 = 3;
+        const uint64_t MAXIMUM_MIXIN_V3 = 7;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 3;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 0;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 6;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 1;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 10;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 2;
 
         /* The mixin to use by default with wallet software */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -146,15 +146,15 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
 
-        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 6;
+        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 800000;
 
         const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
         const size_t DIFFICULTY_WINDOW = 17;
 
-        const size_t DIFFICULTY_WINDOW_V1 = 288;
+        const size_t DIFFICULTY_WINDOW_V1 = 2880;
 
-        const size_t DIFFICULTY_WINDOW_V2 = 288;
+        const size_t DIFFICULTY_WINDOW_V2 = 2880;
 
         const uint64_t DIFFICULTY_WINDOW_V3 = 60;
 
@@ -199,16 +199,16 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
         /* For new projects forked from this code base, the values immediately below
            should be changed to 0 to prevent issues with transaction processing
            and other possible unexpected behavior */
-        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 0;
+        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 1400000;
 
-        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT = 0;
+        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT = 1600000;
 
-        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 0;
+        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 1600000;
 
         /* Coinbase transactions must include the recipient address + tx priv
          * key in tx_extra to verify the outputs go to that address after this
          * height. */
-        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 280;
+        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 2800000;
 
         /* This describes how many blocks of "wiggle" room transactions have regarding
            when the outputs can be spent based on a reasonable belief that the outputs
@@ -238,7 +238,7 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1 = 90;
 
-        const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1_HEIGHT = 220;
+        const size_t NORMAL_TX_MAX_OUTPUT_COUNT_V1_HEIGHT = 2200000;
 
         const uint32_t UPGRADE_HEIGHT_V2 = 1;
 
@@ -248,9 +248,9 @@ const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c
 
         const uint32_t UPGRADE_HEIGHT_V5 = 4; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 6; // Upgrade height for Chukwa v1 switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 5; // Upgrade height for Chukwa v1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V7 = 10; // Upgrade height for Chukwa v2 switch
+        const uint32_t UPGRADE_HEIGHT_V7 = 6; // Upgrade height for Chukwa v2 switch
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V7;
 
